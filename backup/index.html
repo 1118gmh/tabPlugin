@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>选项卡</title>
+    <link rel="stylesheet" href="css/baseCss.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="tabBox" id="tabBox">
+        <ul class="option">
+            <li class="active"><a href="#">图片</a></li>
+            <li><a href="#">专栏</a></li>
+            <li><a href="#">热点</a></li>
+
+        </ul>
+        <div class="con active">1</div>
+        <div class="con">2</div>
+        <div class="con">3</div>
+
+    </div>
+    <!-- <script src="js/tab.js"></script> -->
+    <script src="js/tabPlugin.js"></script>
+    <script>
+        new TabPlugin('#tabBox', {
+            lastIndex: 2,
+            eventType: 'click',
+            changeEnd: function(curLi, curContent, index, lastIndex) {
+                // curLi.style.background = 'red';
+            }
+        });
+    </script>
+</body>
+
+</html>
